@@ -1,0 +1,15 @@
+# Site settings
+title: Agência RedFoot
+email: napalmdev@gmail.com
+description: > # Agência focada em desenvolvimento de sites 
+  sistemas com tecnologias Web(HTML5, CSS3, JS).
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: "http://yourdomain.com" # the base hostname & protocol for your site
+twitter_username: napalmdev
+github_username:  napalmdev
+
+# Build settings
+markdown: kramdown
+
+#exclude
+exclude: ['package.json', 'src', 'node_modules', 'bower_components']

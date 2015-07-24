@@ -1,0 +1,71 @@
+body, html
+  height 100%
+  &:after
+  	display block
+  	clear both	
+
+/**
+* mudando o box model para border-box
+*/
+*, *:before, *:after
+  vendor(box-sizing,'border-box')
+
+
+/**
+* classe que adiciona efeito de transicao aos elementos
+*/
+.transicao
+	vendor(transition, all 0.6s ease)
+
+
+
+/**
+* reset margin & padding
+*/
+*
+  padding 0
+  margin 0 auto	
+
+h1, h2, h3, h4 
+  font-family $font-base
+  text-align center	
+
+.title1
+  font-size $title1
+  color $color-amarelo-claro
+  
+.title2
+  font-size $title2
+
+.title3
+  font-size $title3
+
+.title4
+  font-size $title4
+
+.color-standart
+  color $color-cinza-escuro
+  
+.color-inverse
+  color $color-branco
+  
+.color-salmao  
+  color $color-salmao
+  
+
+ul
+  list-style none
+
+a
+  text-decoration none	  
+
+body
+  background $color-salmao
+
+.container
+  center(960px)
+  padding rem(5px) 0
+  text-align center
+
+
+

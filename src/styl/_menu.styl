@@ -1,0 +1,138 @@
+$header-menu-size = 68px
+
+header:after
+  content: ''
+  display block
+  clear both
+  +below(cut)
+    height 78px  
+  
+$menu-hover
+  text-decoration underline overline
+  
+nav.menu
+  height $header-menu-size
+  background $color-branco
+  padding-bottom rem(10px)
+  +below(cut)
+    position fixed
+    top 0
+    z-index 1
+    width 100%
+    border-bottom 1px solid $color-cinza-claro
+    box-shadow: 0 0 8px #ccc;
+  
+  ul
+    +below(cut)
+      display none
+
+  span.logo
+    col(2/6)
+    +below(cut)
+      col(4/6)
+      text-align left
+
+
+
+
+  span.hidden-menu-btn
+    display none
+    margin-top rem(10px)
+    col(2/6)
+    +below(cut)
+      display block
+      float right
+    background $color-branco
+    vendor(border-radius, 3px)
+    border 1px solid $color-cinza-claro
+    width 40px
+    padding 5px
+    cursor pointer
+    
+    span.line
+      background $color-cinza-escuro
+      display block
+      height 3px
+      width 80%
+      vendor(border-radius, 20%)
+      margin 5px auto
+    
+    &:hover
+      background $color-cinza-claro
+        
+  
+.hidden-menu
+  width 100%; 
+  float left;
+  position absolute;
+  display none
+  z-index 9999
+  top 0
+  background-color rgba(0,0,0,.8)
+  
+  ul.list-hidden
+    margin 0
+    display block       
+    
+    li
+      display block
+      padding rem(20px) 0
+      text-align center
+      border-bottom rem(1px) solid #444 
+      
+      &:last-child
+        border none
+      
+      a
+        font-weight 600
+        line-height 100%
+        color $color-branco
+      
+      &:hover
+        @extend $menu-hover   
+
+
+  
+ul.list
+  col(3/6)
+  height $header-menu-size
+  line-height $header-menu-size
+  
+  li
+    +above(cut)
+      display inline-block
+    +below(cut)
+      display block  
+    
+    a
+      display block
+      font $font-standart $font-menu 
+      color $color-cinza-escuro 
+      text-decoration none
+      
+      &:hover
+        @extend $menu-hover 
+  
+
+ul.nav-social
+  col(1/6)
+  margin-right 0
+  height $header-menu-size
+  line-height $header-menu-size
+  
+  li
+    display inline-block
+  
+  i
+    color $color-cinza-escuro
+    font-size rem(25px)
+
+
+//classe utilizada para exibir o menu oculto em determinado breakpoint
+.revelar
+  display block!important
+  
+//
+.fechar
+  cursor pointer  
+
