@@ -7,18 +7,30 @@ $color-amarelo-claro  = #FFEFBF
 $bg-slide = $color-cinza-escuro url('../img/bg-header.jpg') no-repeat 0 0
 $bg-about = url('../img/bg-about.jpg') no-repeat 0 0
 
-$font-base = 'Open Sans', serif, Arial;
-$font-menu = Montserrat, 'Open Sans', Arial, Helvetica;
+$font-menu = 'Open Sans', serif, Arial;
+$font-base = Montserrat, 'Open Sans', Arial, Helvetica;
 
 $title1 = rem(45px)
 $title2 = rem(30px)
 $title3 = rem(30px)
 $title4 = rem(25px)
-$font-standart = rem(16px)
+$font-md = rem(16px)
+$font-sm = rem(14px)
+$font-xs = rem(10px)
 $font-content = rem(25px)
 
 //cut = 47.87rem
 cut = 37.5rem
-mobile = 400px
 
-desktop = 1024px 
+$screen-xs = 480px // Extra small screen  
+$screen-sm = 768px // Small screen 
+$screen-md = 992px // Medium screen  
+$screen-lg = 1200px // Large screen  
+$screen-xlg = 1600px // Extra Large screen  
+$screen-xxlg = 1900px // Extra Large screen  
+ 
+$screen-xs-max = ($screen-sm - 1)
+$screen-sm-max = ($screen-md - 1)
+$screen-md-max = ($screen-lg - 1)
+$screen-lg-max = ($screen-xlg - 1)
+$screen-xlg-max = ($screen-xxlg - 1)

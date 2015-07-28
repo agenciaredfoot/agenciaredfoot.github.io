@@ -1,5 +1,3 @@
-//edit()
-
 $borda-services = 1px solid $color-cinza-claro
 
 section.services
@@ -12,15 +10,23 @@ section.services
     display block
     clear both      
   
+  h3
+    padding-bottom 10px
   article
     position relative
     margin-bottom rem(20px)
     padding rem(5px)
-    +above(cut)
-      border $borda-services
-      col(.237)
-    +below(cut)
-      stack()	
+    border $borda-services
+    col(.237)
+    height rem(370px)
+    +below($screen-md)
+      col(.4, offset:.05)
+      height rem(250px) 
+    +below($screen-sm)
+      stack()
+      height auto
+      border none
+      border-top $borda-services	
 	
     span.rotule
       display block
@@ -30,10 +36,10 @@ section.services
       padding 15px
       background $color-salmao
       vendor(border-radius, 50%)
-
       i
         font-size 50px
         color $color-branco   
     	
-      p
-        color $color-cinza-escuro    
+    p
+      color $color-cinza-escuro
+      padding 0 rem(5px)    

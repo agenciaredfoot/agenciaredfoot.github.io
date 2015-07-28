@@ -1,11 +1,8 @@
 $header-menu-size = 68px
 
-header:after
-  content: ''
-  display block
-  clear both
-  +below(cut)
-    height 78px  
+header
+  +below($screen-sm)
+    height 68px  
   
 $menu-hover
   text-decoration underline overline
@@ -13,7 +10,6 @@ $menu-hover
 nav.menu
   height $header-menu-size
   background $color-branco
-  padding-bottom rem(10px)
   +below(cut)
     position fixed
     top 0
@@ -22,32 +18,26 @@ nav.menu
     border-bottom 1px solid $color-cinza-claro
     box-shadow: 0 0 8px #ccc;
   
-  ul
-    +below(cut)
-      display none
-
   span.logo
-    col(2/6)
-    +below(cut)
-      col(4/6)
+    padding rem(4px) 0
+    span(1/6, offset:-1/6)
+    +below($screen-xs)
+      span(4/6)
       text-align left
-
-
-
 
   span.hidden-menu-btn
     display none
     margin-top rem(10px)
-    col(2/6)
-    +below(cut)
-      display block
-      float right
     background $color-branco
     vendor(border-radius, 3px)
     border 1px solid $color-cinza-claro
-    width 40px
     padding 5px
     cursor pointer
+    col(1/6)
+    width 40px
+    +below($screen-sm)
+      display block
+      float right
     
     span.line
       background $color-cinza-escuro
@@ -94,24 +84,28 @@ nav.menu
 
   
 ul.list
-  col(3/6)
+  span(3/6)
+  +below($screen-md)
+    span(4/6)
+  +below($screen-sm)
+    display none
   height $header-menu-size
   line-height $header-menu-size
-  
   li
-    +above(cut)
-      display inline-block
-    +below(cut)
-      display block  
-    
+    span(1/5)
+    padding 0 rem(5px)
+    border-right 1px solid $color-cinza-claro
+    &:last-child
+      border-right none
+    &:hover
+      background #F0F0F0 
     a
-      display block
-      font $font-standart $font-menu 
+      display inline-block
+      font $font-sm $font-menu
+      font-weight bold 
       color $color-cinza-escuro 
       text-decoration none
-      
-      &:hover
-        @extend $menu-hover 
+      line-height 100%
   
 
 ul.nav-social
@@ -119,7 +113,8 @@ ul.nav-social
   margin-right 0
   height $header-menu-size
   line-height $header-menu-size
-  
+  +below($screen-md)
+    display none
   li
     display inline-block
   

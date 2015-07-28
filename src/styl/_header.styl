@@ -1,7 +1,38 @@
 @import '_menu'
 section.slide
-  padding rem(70px)
-  +below(cut)
+  padding rem(90px)
+  +below($screen-sm)
     display none
-  +above(cut)
-    background $bg-slide  
+  +above($screen-sm)
+    background $bg-slide 
+
+
+@keyframes typing {
+  from { width: 100% }
+  to { width:0 }
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: black }
+}
+
+
+h1.title1	 
+  position relative 
+  
+  span 
+    position absolute
+    top 0 
+    right 0 
+    width 0 
+    background white  /* same as background */
+    border-left .1em solid black 
+    
+    vendor(box-sizing, border-box) 
+    
+    -webkit-animation typing 17s steps(30, end), /* # of steps = # of characters */
+                        blink-caret 1s step-end infinite;
+    -moz-animation typing 17s steps(30, end), /* # of steps = # of characters */
+                        blink-caret 1s step-end infinite;
+     
